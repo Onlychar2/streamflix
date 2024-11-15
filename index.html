@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Streaming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #111;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 50px;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #e50914;
+        }
+
+        .hero-section {
+            background-image: url('https://tinyurl.com/xdfdfzsssss');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-section h2 {
+            font-size: 50px;
+            margin: 0;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+            margin: 20px 0;
+        }
+
+        .btn-primary {
+            background-color: #e50914;
+            color: white;
+            padding: 10px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #f40612;
+        }
+
+        /* Sección de categorías */
+        .category-section {
+            padding: 50px 20px;
+            background-color: #1c1c1c;
+        }
+
+        .category-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .category-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+        }
+
+        .category-item {
+            position: relative;
+            width: 250px;
+            height: 140px;
+            background-color: #333;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .category-item:hover {
+            transform: scale(1.05);
+        }
+
+        .category-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Galería de videos destacados */
+        .featured-section {
+            padding: 50px 20px;
+            background-color: #111;
+        }
+
+        .featured-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .video-card {
+            background-color: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover {
+            transform: scale(1.05);
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-card .video-title {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+        }
+
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>StreamFlix</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Películas</a>
+            <a href="#">Series</a>
+            <a href="#">Mi Lista</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Descubre lo mejor del entretenimiento</h2>
+        <p>Ve películas y series sin límites, donde quieras y cuando quieras.</p>
+        <a href="#" class="btn-primary">Comienza ahora</a>
+    </section>
+
+    <!-- Categorías -->
+    <section class="category-section">
+        <h2>Categorías populares</h2>
+        <div class="category-carousel">
+            <div class="category-item"><img src="https://i.imgur.com/4wCoVWB.png" alt="Acción"></div>
+            <div class="category-item"><img src="https://via.placeholder.com/250x140" alt="Comedia"></div>
+            <div class="category-item"><img src="https://i.imgur.com/EcqftI5.png" alt="Drama"></div>
+            <div class="category-item"><img src="https://via.placeholder.com/250x140" alt="Suspenso"></div>
+            <div class="category-item"><img src="https://via.placeholder.com/250x140" alt="Románticas"></div>
+        </div>
+    </section>
+
+    <!-- Videos Destacados -->
+    <section class="featured-section">
+        <h2>Videos Destacados</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <img src="https://via.placeholder.com/400x250" alt="Video 1">
+                <div class="video-title">Video 1: Aventura Épica</div>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/400x250" alt="Video 2">
+                <div class="video-title">Video 2: Comedia Inolvidable</div>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/400x250" alt="Video 3">
+                <div class="video-title">Video 3: Thriller Psicológico</div>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/400x250" alt="Video 4">
+                <div class="video-title">Video 4: Romance y Drama</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 StreamFlix. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
